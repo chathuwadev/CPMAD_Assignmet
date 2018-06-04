@@ -1,0 +1,61 @@
+<!--
+  Generated template for the AppointmentviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+        <ion-label center   style="font-weight: bold; font-size: 80px; color: rgb(18, 209, 168);"><h5> APPOINTMENTS VIEW</h5></ion-label></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<style>
+    
+    
+      ion-content{
+        background-color:#f9f9f9;
+        background: url('https://previews.123rf.com/images/9dreamstudio/9dreamstudio1708/9dreamstudio170804179/84983794-styling-hair-with-combs-and-tools-in-barbershop-on-stone-background-top-view-mock-up.jpg') center/cover;
+      }
+      .img{
+        margin-top:13%;
+        margin-bottom: 20%;
+        margin-left: 33.3%;
+        margin-right: 20%;
+    
+      }
+    </style>
+<ion-content padding>
+  <ion-card *ngFor="let appoi of appointment">
+    <ion-list>
+      <ion-item>
+        <ion-label>Customer Name</ion-label>
+        <ion-badge item-right>{{appoi.cname}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contact No</ion-label>
+        <ion-badge item-right>{{appoi.contact}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Date and Time</ion-label>
+        <ion-badge item-right>{{appoi.myDate}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Requirment</ion-label>
+        <ion-badge item-right>{{appoi.requirment}}</ion-badge>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cost</ion-label>
+        <ion-badge item-right>{{appoi.totalCost}}</ion-badge>
+      </ion-item>
+    </ion-list>
+    <button ion-button round  block color="secondary" (click)=" confirm(appoi.id)">Confirme </button>
+   
+    <button ion-button round (click)="cancel(appoi.id)" block color="secondary"> Cancel </button>
+
+  </ion-card>
+
+</ion-content>

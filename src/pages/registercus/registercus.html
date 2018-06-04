@@ -1,0 +1,82 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> 
+      <ion-label center style="font-weight: bold; font-size: 80px; color: rgb(18, 209, 168);"><h5> CUSTOMER</h5></ion-label></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <style>
+    ion-content {
+      background: url('https://previews.123rf.com/images/9dreamstudio/9dreamstudio1708/9dreamstudio170804179/84983794-styling-hair-with-combs-and-tools-in-barbershop-on-stone-background-top-view-mock-up.jpg') center/cover;
+    }
+  </style>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label color="primary">Name :</ion-label>
+      <ion-input placeholder="" [(ngModel)]="name" aria-required=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">User ID :</ion-label>
+      <ion-input placeholder="" [(ngModel)]="userid" aria-required=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Password :</ion-label>
+      <ion-input placeholder="" [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Confirm Password :</ion-label>
+      <ion-input placeholder="" [(ngModel)]="password2" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+        <ion-option value="o">Other</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Contact No :</ion-label>
+      <ion-input placeholder="" [(ngModel)]="contact"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-note item-left>
+      </ion-note>
+      <p>
+        By proceeding with this signup process,
+      </p>
+      <p>
+        you agree that you reed and accept our
+      </p>
+      <p>
+        TERMS of use.
+      </p>
+      <ion-note item-right>
+      </ion-note>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button round (click)="showConfirm()" block color="secondary"> SIGN ME IN </button>
+
+  <br>
+
+  <button ion-button round (click)="clear()" block color="secondary"> CLEAR </button>
+
+  <!--<button ion-button clear (click)="clearData()">CLEAR</button>-->
+
+</ion-content>

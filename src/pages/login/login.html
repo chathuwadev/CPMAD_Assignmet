@@ -1,0 +1,40 @@
+
+
+<style>
+
+
+  ion-content{
+    background-color:#f9f9f9;
+    background: url('https://previews.123rf.com/images/9dreamstudio/9dreamstudio1708/9dreamstudio170804179/84983794-styling-hair-with-combs-and-tools-in-barbershop-on-stone-background-top-view-mock-up.jpg') center/cover;
+  }
+  .img{
+    margin-top:13%;
+    margin-bottom: 20%;
+    margin-left: 33.3%;
+    margin-right: 20%;
+
+  }
+</style>
+<ion-content padding>
+  <img src="https://cilp-art.net/wp-content/uploads/2018/01/clip-art-hair-studio-free-clipart-hair-salon-free-clipart-hair-salon-hair-clip-art-free-download-clipart-panda-free-clipart-images-800-x-742.jpg"   style="align-items: center;width:125px;height:200px;top:500px;" class="img">
+  <ion-list>
+
+
+    <ion-label stacked color="primary"><h5>Username</h5></ion-label>
+    <ion-input  type="text" [(ngModel)]="usernameField" value="" color="primary" style="border:1px solid lightgreen;"></ion-input>
+
+
+
+    <ion-label stacked color="primary"><h5>Password</h5></ion-label>
+    <ion-input type="password" [(ngModel)]="passwordField" value="" style="border:1px solid lightgreen;"></ion-input>
+
+
+  </ion-list>
+
+  <div padding>
+    <button (click)="openPage()" ion-button color="secondary" block>LogIn</button><br/>
+    <!--<button (click)="loadOwnerPage()" ion-button color="secondary" block>LogInex</button><br/>-->
+    <button (click)="openPage2()" ion-button color="primary" block><u>Register as a new user</u></button>
+  </div>
+
+</ion-content>

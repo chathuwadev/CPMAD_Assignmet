@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title >
+        <ion-label center style="font-weight: bold; font-size: 80px; color: rgb(18, 209, 168);"><h5> MY SALON</h5></ion-label>
+    </ion-title>
+    <ion-buttons end >
+     
+      <button ion-button icon-left (click)="logout()">
+        <ion-icon name="logout"></ion-icon>
+        Logout
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<style>
+ion-content
+{
+  background: url('https://previews.123rf.com/images/9dreamstudio/9dreamstudio1708/9dreamstudio170804179/84983794-styling-hair-with-combs-and-tools-in-barbershop-on-stone-background-top-view-mock-up.jpg') center/cover;
+}
+</style>
+
+
+  
+  <ion-card  style="background-color: rgb(18, 209, 168);" *ngFor="let salon1 of salon "  (click)="gotoSalondetailsPage(salon1)">
+      <ion-card-content>
+          <ion-item>
+              <ion-label style="font-weight: bold; font-size: 20px; color: rgb(4, 5, 5);">{{salon1.name}}</ion-label>
+              </ion-item>
+              <img  height="250" width="500" [src]="salon1.image"/>
+      </ion-card-content>
+   
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab  color="secondary" (click)="showAppointments()">
+      <ion-icon name="apps"></ion-icon>
+    </button>
+
+  </ion-fab>
+
+
+</ion-content>

@@ -1,0 +1,91 @@
+<!--
+  Generated template for the CreateappointmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+        <ion-label center style="font-weight: bold; font-size: 80px; color: rgb(18, 209, 168);"><h5> CREATE APPOINTMENT</h5></ion-label>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<style>
+    
+    
+      ion-content{
+        background-color:#f9f9f9;
+        background: url('https://previews.123rf.com/images/9dreamstudio/9dreamstudio1708/9dreamstudio170804179/84983794-styling-hair-with-combs-and-tools-in-barbershop-on-stone-background-top-view-mock-up.jpg') center/cover;
+      }
+      .img{
+        margin-top:13%;
+        margin-bottom: 20%;
+        margin-left: 33.3%;
+        margin-right: 20%;
+    
+      }
+    </style>
+<ion-content padding>
+<ion-card style="background-color: rgb(128, 243, 216);">
+    <ion-card-header>
+        SELECT REQUIRMENT
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item style="font-weight: bold; font-size: 15px; color: rgb(7, 7, 7);">
+          Name
+          <ion-badge item-right >{{apointment.name}}</ion-badge>
+        </ion-item>
+        <ion-item style="font-weight: bold; font-size: 13px; color: rgb(7, 7, 7);">
+           Customer Name
+            <ion-badge item-right>{{userN}}</ion-badge>
+          </ion-item>
+          <ion-item style="font-weight: bold; font-size: 13px; color: rgb(7, 7, 7);">
+            Contact NO
+             <ion-badge item-right>{{contact}}</ion-badge>
+           </ion-item>
+
+         
+
+            <ion-item>
+                <ion-label style="font-weight: bold; font-size: 15px; color: rgb(7, 7, 7);">Requirment</ion-label>
+                <ion-select [(ngModel)]="mySelect" (ionChange)="onChange(mySelect)"  multiple="true">
+                  <ion-option [value]="item" *ngFor="let item of apointment.type">{{item.name}}  -- Rs. {{item.price}}</ion-option>               
+                </ion-select>
+              </ion-item>
+
+  
+        <ion-item>
+            <ion-label style="font-weight: bold; font-size: 15px; color: rgb(7, 7, 7);">Date</ion-label>
+            <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+          </ion-item>
+
+          <ion-item style="font-weight: bold; font-size: 15px; color: rgb(7, 7, 7);">
+             Total Cost
+               <ion-badge item-right>Rs.{{totalCost}}</ion-badge>
+             </ion-item>
+      </ion-card-content>
+      
+    </ion-card>
+    <div>
+        
+            <br>
+        
+           
+            <button ion-button round  block color="secondary" (click)=" showConfirm()">Confirme </button>
+        
+            <br>
+            <br>
+        
+            <button ion-button round (click)="cancel()" block color="secondary"> Cancel </button>
+        
+            <br>
+        
+          
+    </div>
+  
+
+</ion-content>
